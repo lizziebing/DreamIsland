@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+body { _margin:0; _height:100%; align:center; /*IE6 BUG*/ }
+header{text-align:center;}
+footer{text-align:center;}
+.center{
+	padding-top:15px;
+}
+#techinfo{
+	width:620px;  
+ 	
+	border-left-width:0px;
+	border-right-width:0px;
+	border-collapse:collapse;
+	border-style:solid;
+/* 	font-weight:nomal; */
+	font-size:18px;
+}
+.xingbiao_text{
+float:left;	
+}
+
+.commentstar{
+	width:280px;
+	margin-left:140px;
+}
