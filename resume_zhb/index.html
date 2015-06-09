@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>simple</title>
+<link href="css/resume.css" rel="stylesheet" media="screen">
+<style type="text/css">
+
+.xingbiao{
+display:block;
+width: 16px;
+height: 16px;
+background: url(img/star_unselected.png) no-repeat;
+cursor: pointer;
+float:left;
+}
+
+.xingbiao_b{
+display:block;
+width: 16px;
+height: 16px;
+background: url(img/star_selected.png) no-repeat;
+cursor: pointer;
+float:left;
+}
+
+</style>
+<script src="js/jquery-1.8.3.js" ></script>
+<script src="js/rili.js" ></script>
+<script src="js/res.js" ></script>
+</head>
+<body>
+<!-- 为了方便后续开发，工整的代码格式很重要 -->
+<div id='content' align="center" >
+   <table>
+      <tr align="center" >
+         <td valign='top'>
+            <div align="center">
+              
+               <h3>change</h3>
+            </div>
+            
+            
+  
+           </td>
+           <td valign="top" style="padding-left:50px">
+              <div>
+                <br>
+                <br>
+                <div>
+                   <img  class="img" src="img/zhb.jpg" width="92px" height="123px"/>
+                </div>
+                <div id='comment' class='commentstar'  >
+                   <div id='comment_star' >
+                      <span class="xingbiao_text">评分：</span>
+                         <!-- title记录点击状态 -->
+                      <span id="xingbiao1" class="xingbiao" onclick="turn('1');" title=1></span>
+                      <span id="xingbiao2" class="xingbiao" onclick="turn('2');" title=1></span>
+                      <span id="xingbiao3" class="xingbiao" onclick="turn('3');" title=1></span>
+                      <span id="xingbiao4" class="xingbiao" onclick="turn('4');" title=1></span>  
+                      <span id="xingbiao5" class="xingbiao" onclick="turn('5');" title=1></span>
+                  </div>
+                </div>
+              </div>
+               <br>
+  
+             <div id='rightTime' style='width:280px;margin-top:50px;'>
+            </div>
+         </td>
+       </tr>
+     </table>   
+   </div>
+</body>
+</html>
