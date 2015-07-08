@@ -1,0 +1,39 @@
+#sendHandle a{
+    cursor:pointer;
+    text-decoration:none;
+    color:#25690c;
+}
+/*定义正常链接的样式*/
+
+#sendHandle a:link {
+    text-decoration:none;
+}
+/*定义已访问过链接的样式；*/
+#sendHandle a:visited {
+    text-decoration:none;
+}
+/*定义鼠标悬浮在链接上时的样式*/
+#sendHandle a:hover {
+    color:#69a155;
+    text-decoration:none;
+}
+/*定义鼠标点击链接时的样式*/
+#sendHandle a:active {
+    text-decoration:none;
+}
+
+
+
+#upload_form_div{
+    position:absolute;  
+    top:0px;
+    left:66px;
+    filter:alpha(opacity=0);
+}
+
+#simple_upload_form_div{
+    position:absolute;  
+    top:0px;
+    left:0px;
+    filter:alpha(opacity=0);
+}
