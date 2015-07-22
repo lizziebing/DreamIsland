@@ -7,8 +7,78 @@
 <link href="css/main.css" rel="stylesheet" type="text/css" /> 
 <link href="css/jquery.mobile.flatui.css" rel="stylesheet" type="text/css" /> 
 <title>Insert title here</title>
+<style type="text/css">
+video{max-width:100%;height:auto;}
+#navigation{
+	text-shadow: 2px 2px 1px #cccccc; /*阴影值的速记规则永远是先向右再向下。因此，第一个值指的是右侧阴影的大小，
+第二个值指的是下方阴影的大小，第三个值指的是模糊距离（即阴影从开始变淡到完全
+消失的距离），最后一个值是阴影颜色*/
+}
+</style>
 <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
-<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script> 
+<script>
+//document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';
+
+window.onload=function(){
+	var l=document.links.length;//document.links返回的是所有有 href 的和标签
+	for(var i=0;i<l;i++){
+	document.links[i].onclick=(
+   //传递值参数的方法可以解除闭包对于i的影响
+    function(x){
+	return function(){
+	alert(x+1);
+	}//以返回值的形式付值给onclick
+	})(i);
+		document.links[i].onclick=al(i);
+	}
+	 
+	
+/*	var inputs=document.getElementById("texttest");
+	
+	//inputs.setAttribute("value","alipay WD Team");
+	inputs.onfocus=function(){							 
+				  this.value='';
+				  };			  
+		//对象获得焦点（光标）时发生
+	}*/
+/*windows.onload=function(){
+	var len=document.getElementsByTagName("a").length;
+	for(var i=0;i<len;i++)
+		{
+		document.getElementsByTagName("a")[i].onclick=(function(x){
+			alert(x);
+		})(i);
+		}
+}*///页面内的所有元素加载完毕后执行
+
+/*var body = document.getElementsByTagName("body")[0]
+,   links = document.getElementsByTagName("a")
+,   len = links.length
+,   foo = function(e){
+    var tagName = e.target.tagName.toLowerCase()
+    if ((tagName === 'a' || tagName === 'area') && e.target.href) {
+        for (var i = 0; i < len; i++)
+            if (links[i] === e.target) {
+                alert(i + 1)
+            }
+    }
+}
+body.addEventListener('click', foo, false)//冒泡阶段处理事件处理程序*/
+
+
+var foo = 1;
+function main(){
+    alert(foo);
+    var foo = 2;
+    alert(this.foo)
+    this.foo = 3;
+}
+//var m1 =new main();
+
+
+
+
+</script> 
 
 </head>
 <body>
@@ -46,6 +116,23 @@
   <div id="content">  
     <p>here is the content</p>   
     <h1>每年<span>当我观看奥斯卡颁奖典礼时都感到非常气愤</span></h1>
+    <video controls autoplay preload="auto" loop poster="myVideo.jpg">
+  <!--  <source src="video/myVideo.ogv" type="video/ogg">  --> 
+    <source src="video/myVideo.mp4" type="video/mp4"> 
+    
+   H5视频多格式多浏览器支持
+    </video>
+    
+    
+    <a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
+
+<p>如果把链接的 target 属性设置为 "_blank"，该链接会在新窗口中打开。</p>
+
+<a href="http://www.baidu.com">百度</a>
+<a name="tips"></a>
+<input  type='text' placeholder='alipay WD Team' />
+<a href="#tips">指向提示锚点</a>
+
   </div>  
   <!-- the footer --> 
   <div id="footer">  
